@@ -1,0 +1,23 @@
+{
+  "name": "oidc-plus4u-vault-bf",
+  "version": "0.1.0",
+  "description": "CLI tool for managing access codes for insomnia-plugin-oidc-plus4u.",
+  "main": "lib/securestore.js",
+  "repository": "https://github.com/francbohuslav/oidc-plus4u-vault",
+  "license": "MIT",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
+    "r2": "^2.0.0",
+    "read": "^1.0.7",
+    "mkdirp": "^0.5.1"
+  },
+  "bin": {
+    "oidc-plus4u-vault-bf": "index.js"
+  },
+  "keywords": [
+    "insomnia",
+    "plus4u",
+    "oidc"
+  ]
+}
