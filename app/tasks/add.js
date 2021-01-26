@@ -36,8 +36,8 @@ const help = [
   {
     header: 'Synopsis',
     content: [
-      '$ oidc-plus4u-vault-bf add {underline user uid}',
-      '$ oidc-plus4u-vault-bf add [{bold --url} {underline oidc url}] {underline user uid}'
+      '$ plus4u-insomnia-keystore-vault add {underline user uid}',
+      '$ plus4u-insomnia-keystore-vault add [{bold --url} {underline oidc url}] {underline user uid}'
     ]
   },
   {

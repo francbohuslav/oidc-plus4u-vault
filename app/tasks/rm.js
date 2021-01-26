@@ -24,7 +24,7 @@ const help = [
   },
   {
     header: 'Synopsis',
-    content: '$ oidc-plus4u-vault-bf rm {underline user}'
+    content: '$ plus4u-insomnia-keystore-vault rm {underline user}'
   },
   {
     header: 'Options',

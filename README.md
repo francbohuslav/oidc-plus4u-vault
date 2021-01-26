@@ -5,7 +5,7 @@ This project is extended copy of https://github.com/jiridudekusy/keystore-insomn
 
 # How to install ?
 
-`npm install -g oidc-plus4u-vault-bf`
+`npm install -g plus4u-insomnia-keystore-vault`
 
 # How to use ?
 

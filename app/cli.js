@@ -8,13 +8,13 @@ const LsTask = require("./tasks/ls");
 
 const sections = [
   {
-    header: "oidc-plus4u-vault-bf",
+    header: "plus4u-insomnia-keystore-vault",
     content: "Utility tool for maintaining AES-265 encrypted file with accessCodes to oidc.plus4u.net."
   },
   {
     header: "Synopsis",
     content: [
-      "oidc-plus4u-vault-bf <command> <command parameters>"
+      "plus4u-insomnia-keystore-vault <command> <command parameters>"
     ]
   },
   {

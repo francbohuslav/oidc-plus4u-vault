@@ -18,7 +18,7 @@ const help = [
   {
     header: 'Synopsis',
     content: [
-      '$ oidc-plus4u-vault-bf ls'
+      '$ plus4u-insomnia-keystore-vault ls'
     ]
   },
   {

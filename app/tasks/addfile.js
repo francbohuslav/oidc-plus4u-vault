@@ -30,7 +30,7 @@ const help = [
     },
     {
         header: "Synopsis",
-        content: ["$ oidc-plus4u-vault-bf addfile {underline file}"],
+        content: ["$ plus4u-insomnia-keystore-vault addfile {underline file}"],
     },
     {
         header: "Options",
