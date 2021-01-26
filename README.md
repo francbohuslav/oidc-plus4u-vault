@@ -11,6 +11,13 @@ This project is extended copy of https://github.com/jiridudekusy/keystore-insomn
 
 ![Help](doc/help.png)
 
+## Structure of text file
+*{user UID} {AccessCode1} {AccessCode2}*
+
+12-3456-1 g156fd1g65d1g65df1g56d gd1f6g1d56g1d6f5g1d6f5 \
+12-3456-2 54dv6g24dv26g4d6v5g24d 4jng257jd8f27v4d9s8c4g \
+...
+
 # How to develop ?
 
 Publish new version
