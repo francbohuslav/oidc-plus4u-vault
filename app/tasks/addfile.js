@@ -1,7 +1,6 @@
 const TaskUtils = require("../misc/task-utils");
 const SecureStoreCliCommon = require("../secure-store-cli-common");
 const { promisify } = require("util");
-const read = promisify(require("read"));
 const r2 = require("r2");
 const readFile = promisify(require("fs").readFile);
 
@@ -14,6 +13,12 @@ const optionsDefinitions = [
         typeLabel: "{underline file}",
         defaultOption: true,
         description: "Path file that contains access codes for new accounts.",
+    },
+    {
+        name: "url",
+        type: String,
+        typeLabel: "{underline oidc url}",
+        description: "URL to the OIDC server. If not set, defaults to " + DEFAULT_OIDC_SERVER + ".",
     },
     {
         name: "help",
@@ -30,7 +35,10 @@ const help = [
     },
     {
         header: "Synopsis",
-        content: ["$ plus4u-insomnia-keystore-vault addfile {underline file}"],
+        content: [
+            "$ plus4u-insomnia-keystore-vault addfile {underline file}",
+            "$ plus4u-insomnia-keystore-vault addfile [{bold --url} {underline oidc url}] {underline file}",
+        ],
     },
     {
         header: "Options",
@@ -55,10 +63,12 @@ class AddFileTask {
         let secureStoreCliCommon = await SecureStoreCliCommon.init();
         let secureStoreCnt = await secureStoreCliCommon.readSecureStore();
 
+        const oidcServer = options.url;
+
         for (var ai = 0; ai < accounts.length; ai++) {
             let [user, ac1, ac2] = accounts[ai];
             console.log(`Trying to login ${user} using provided credentials...`);
-            if (await this._testLogin(ac1, ac2)) {
+            if (await this._testLogin(ac1, ac2, oidcServer)) {
                 console.log("Login has been successful.");
                 secureStoreCnt[user] = { ac1, ac2 };
                 secureStoreCliCommon.writeSecureStore(secureStoreCnt);
